@@ -29,17 +29,85 @@ namespace workshop.Main
             //numarray[10] = 11;                //now we can add
 
 
-            Log(numarray);
+            LogForeach(numarray);
+            
+            
+            
+            
+            //2
+            string[] zoo = new string[10];
+            zoo[0] = "Lion";
+            zoo[1] = "Giraffe";
+            zoo[2] = "Tarantula";
+            zoo[3] = "Ducked Billed Platypus";
+            zoo[4] = "Tiger";
+            zoo[5] = "Zebra";
+            zoo[6] = "Elephant";
+            zoo[7] = "Tiger";
+            zoo[8] = "Giraffe";
+            
+            //foreach (string a in zoo)
+            //{
+            //    Console.WriteLine(a);
+            //}
+            
+            //foreach (string a in zoo.Distinct())
+            //{                
+            //    Console.WriteLine(a);
+            //}
+            foreach (string a in zoo.OrderBy(d => d))
+            {
+                Console.WriteLine(a);
+            }
+            foreach (string a in zoo.OrderByDescending(d => d))
+            {
+                Console.WriteLine(a);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.ReadLine();
 
 
 
+
+
+
+
+
+
+
         }
+
+
         private static void Log(int[] array)
         {
             for(int i = 0; i < array.Length; i++) 
             {
                 Console.WriteLine(array[i]);
+            }
+        }
+        private static void LogForeach(int[] array)
+        {
+            foreach (int i in array)
+            {            
+                Console.WriteLine(i);
             }
         }
     }

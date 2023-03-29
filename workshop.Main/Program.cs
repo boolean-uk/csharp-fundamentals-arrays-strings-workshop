@@ -1,5 +1,6 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace workshop.Main
 {
@@ -7,6 +8,32 @@ namespace workshop.Main
     {
         static void Main(string[] args)
         {
+            //strings
+            //arrays
+
+
+
+            //STRINGS
+            string hw = "hello world";
+            
+
+            Console.WriteLine(hw.Reverse());
+            Console.WriteLine(new string(hw.Reverse().ToArray()));
+            Console.WriteLine(Microsoft.VisualBasic.Strings.StrReverse(hw));
+
+            Console.WriteLine(hw.Length);
+            Console.WriteLine(hw.Substring(0, 5));
+
+            
+            Console.WriteLine(hw.Remove(0, hw.IndexOf(' ')+1));
+
+            //the StringBuilder
+            //https://www.dotnetperls.com/stringbuilder
+
+
+
+
+            //ARRAYS
             // 1 declare array 
             int[] numarray = new int[10];
 
@@ -26,7 +53,7 @@ namespace workshop.Main
             //numarray[10] = 11;
 
             //Array.Resize(ref numarray, 11);   //resize array
-            //numarray[10] = 11;                //now we can add
+            //numarray[10] = 11;                //now we can add new element
 
 
             LogForeach(numarray);
@@ -46,6 +73,10 @@ namespace workshop.Main
             zoo[7] = "Tiger";
             zoo[8] = "Giraffe";
             
+
+            //sorting
+            //distinct 
+
             //foreach (string a in zoo)
             //{
             //    Console.WriteLine(a);
@@ -55,16 +86,19 @@ namespace workshop.Main
             //{                
             //    Console.WriteLine(a);
             //}
-            foreach (string a in zoo.OrderBy(d => d))
-            {
-                Console.WriteLine(a);
-            }
-            foreach (string a in zoo.OrderByDescending(d => d))
-            {
-                Console.WriteLine(a);
-            }
+            //foreach (string a in zoo.OrderBy(d => d))
+            //{
+            //    Console.WriteLine(a);
+            //}
+            //foreach (string a in zoo.OrderByDescending(d => d))
+            //{
+            //    Console.WriteLine(a);
+            //}
 
-
+            foreach(string s in zoo.Distinct().OrderBy(x => x))
+            {
+                Console.WriteLine(s);
+            }
 
 
 
